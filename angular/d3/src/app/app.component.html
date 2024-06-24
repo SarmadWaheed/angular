@@ -1,0 +1,368 @@
+<app-d3-tree></app-d3-tree>
+<app-pie-tree></app-pie-tree>
+<app-viewchild></app-viewchild>
+
+<!-- <div class="row">
+  <div class="col-12">
+    <div
+      class="page-title-box d-sm-flex align-items-center justify-content-between"
+    >
+      <h4 class="mb-sm-0" style="text-transform: none">Dashboard</h4>
+    </div>
+
+    <div class="card-body m-3">
+      <div
+        class="row page-title-box d-sm-flex align-items-center justify-content-between mt-3"
+      >
+        <h4 class="mb-sm-0" style="text-transform: none">
+          Inactive Sales Person
+        </h4>
+
+        <span
+          >Sales person who have entered the dealership but have not yet
+          starting using this application.</span
+        >
+      </div>
+
+      <div class="table-responsive table-card">
+        <table
+          class="table table-borderless table-centered align-middle table-nowrap mb-0"
+        >
+          <thead class="bg-light text-muted">
+            <th scope="col" class="py-3">Sales Person</th>
+            <th scope="col" class="py-3">
+              Inactive Since <i class="ri-question-line"></i>
+            </th>
+            <th scope="col" class="py-3">
+              Last Activity on SWAI <i class="ri-question-line"></i>
+            </th>
+            <th scope="col" class="py-3">Notify Sales Person</th>
+            <th scope="col" class="py-3">Notifications sent</th>
+            <th scope="col" class="py-3">Last Notified</th>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let item of items"
+              class="bg-white"
+              style="text-transform: none"
+            >
+             
+              <td>
+                <div class="d-flex align-items-center">
+                  <div>
+                    <h5 class="fs-14 my-1">{{ item.name }}</h5>
+                    <span class="text-muted">{{ item.email }}</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <h5 class="fs-14 my-1 fw-normal">{{ item.time }}</h5>
+              </td>
+              <td>
+                <h5 class="fs-14 my-1 fw-normal">{{ item.timeout }}</h5>
+              </td>
+              <td>
+                <button class="btn btn-outline-primary">
+                  Send Notification
+                </button>
+              </td>
+              <td>
+                <i class="ri-notification-4-line"></i>
+              </td>
+
+              <td>
+                <h5 class="fs-14 my-1 fw-normal">{{ item.lastnotify }}</h5>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="row">
+          <div class="col-4">
+            <div>
+              <div class="card-body m-3">
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between mt-3"
+                >
+                 
+                  <h4 class="mb-sm-0" style="text-transform: none">
+                    Sales Persons Activity Status
+                  </h4>
+                </div>
+                <div
+                  class="page-title-box d-sm-flex align-items-center justify-content-between"
+                >
+                  <div
+                    class="chart-container mb-sm-0"
+                    style="text-transform: none"
+                  >
+                    <canvas id="MyChart">{{ chart }}</canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8">
+            <div class="card-body m-3">
+              <div
+                class="row page-title-box d-sm-flex align-items-center justify-content-between mt-3"
+              >
+                <h4 class="mb-sm-0" style="text-transform: none">
+                  Recently Joined
+                </h4>
+
+                <span>
+                  Sales person who have entered the dealership and have started
+                  using the application.
+                </span>
+              </div>
+
+              <div class="table-responsive table-card">
+                <table
+                  class="table table-borderless table-centered align-middle table-nowrap mb-0"
+                >
+                  <thead class="bg-light text-muted">
+                    <th scope="col" class="py-3">Sales Person</th>
+                    <th scope="col" class="py-3">Entry time at dealership</th>
+                    <th scope="col" class="py-3">Started using SWAI at</th>
+                  </thead>
+
+                  <tbody>
+                    <tr
+                      *ngFor="let item of items"
+                      class="bg-white"
+                      style="text-transform: none"
+                    >
+                      
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <h5 class="fs-14 my-1">{{ item.name }}</h5>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <h5 class="fs-14 my-1 fw-normal">{{ item.time }}</h5>
+                      </td>
+
+                      <td>
+                        <h5 class="fs-14 my-1 fw-normal">{{ item.timeout }}</h5>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white" style="border: none">
+            <div
+              class="row page-title-box d-sm-flex align-items-center justify-content-between m-1"
+            >
+              <h4 class="mb-sm-0" style="text-transform: none">
+                Sales Person Engagement Trends
+              </h4>
+
+              <div class="chart-container">
+                <canvas id="MyCharts">{{ chart }}</canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <style>
+  #c1 {
+    height: 540px;
+  }
+</style> -->
+<!-- <style>
+  .apexcharts-tooltip.light {
+    background: red;
+    color: green;
+  }
+</style> -->
+
+<div class="container-fluid" style="padding: 0; margin: 0; width: 100%">
+  <div class="row">
+    <div class="col-lg-12">
+      <div
+        class="page-title-box d-sm-flex align-items-center justify-content-between"
+      >
+        <h4 class="mb-sm-0" style="text-transform: none">Dashboard</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-body mt-1">
+  <!-- Inactive Sales Persons -->
+  <div class="row mt-2">
+    <div class="col-lg-12">
+      <div class="card mb-4">
+        <div
+          class="row card-body d-sm-flex align-items-center justify-content-between mb-2"
+        >
+          <h4 class="fs-14 my-1" style="text-transform: none">
+            Inactive Sales Person
+          </h4>
+          <span
+            >Sales person who have entered the dealership but have not yet
+            starting using this application.</span
+          >
+        </div>
+        <div class="table-responsive">
+          <table
+            class="table table-borderless table-centered align-middle table-nowrap mb-0"
+          >
+            <thead class="bg-light text-muted">
+              <tr>
+                <th scope="col" class="py-3">Sales Person</th>
+                <th scope="col" class="py-3">
+                  Inactive Since <i class="ri-question-line"></i>
+                </th>
+                <th scope="col" class="py-3">
+                  Last Activity on SWAI <i class="ri-question-line"></i>
+                </th>
+                <th scope="col" class="py-3">Notify Sales Person</th>
+                <th scope="col" class="py-3">Notifications sent</th>
+                <th scope="col" class="py-3">Last Notified</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let item of items"
+                class="bg-white"
+                style="text-transform: none"
+              >
+                <td>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <h5 class="fs-14 my-1">{{ item.name }}</h5>
+                      <span class="text-muted">{{ item.email }}</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h5 class="fs-14 my-1 fw-normal">{{ item.time }}</h5>
+                </td>
+                <td>
+                  <h5 class="fs-14 my-1 fw-normal">{{ item.timeout }}</h5>
+                </td>
+                <td>
+                  <button class="btn btn-outline-primary">
+                    Send Notification
+                  </button>
+                </td>
+                <td>
+                  <i class="ri-notification-4-line"></i>
+                </td>
+
+                <td>
+                  <h5 class="fs-14 my-1 fw-normal">{{ item.lastnotify }}</h5>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sales Persons Activity Status and Recently Joined -->
+<div class="row mt-4~" style="padding-left: 15px">
+  <!-- Adjust padding-left here -->
+  <div class="col-lg-4">
+    <div>
+      <div class="card-body m-2">
+        <div
+          class="page-title-box d-sm-flex align-items-center justify-content-between mt-2"
+        >
+          <h4 class="mb-sm-0" style="text-transform: none">
+            Sales Persons Activity Status
+          </h4>
+        </div>
+        <div
+          class="page-title-box d-sm-flex align-items-center justify-content-between"
+        >
+          <div class="chart-container mb-sm-0" style="text-transform: none">
+            <canvas id="MyChart">{{ chart }}</canvas>
+            <apx-chart
+              [series]="chartOptions.series"
+              [chart]="chartOptions.chart"
+              [labels]="chartOptions.labels"
+              [responsive]="chartOptions.responsive"
+            ></apx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="card mt-2 ms-3">
+      <div
+        class="row card-body d-sm-flex align-items-center justify-content-between"
+      >
+        <h4 class="fs-14 my-1" style="text-transform: none">Recently Joined</h4>
+        <span
+          >Sales person who have entered the dealership but have not yet
+          starting using this application.</span
+        >
+      </div>
+      <div class="table-responsive">
+        <table
+          class="table table-borderless table-centered align-middle table-nowrap mb-0"
+        >
+          <thead class="bg-light text-muted">
+            <tr>
+              <th scope="col" class="py-2">Sales Person</th>
+              <th scope="col" class="py-2">Entry time at dealership</th>
+              <th scope="col" class="py-2">Started using SWAI at</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items">
+              <td>
+                <div>
+                  <h5 class="fs-14 my-1">{{ item.name }}</h5>
+                </div>
+              </td>
+              <td>{{ item.time }}</td>
+              <td>{{ item.timeout }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="mb-3">Sales Person Engagement Trends</h4>
+        <div class="chart-container">
+          <canvas id="chart"></canvas>
+          <apx-chart
+            [series]="linechartOptions.series"
+            [chart]="linechartOptions.chart"
+            [xaxis]="linechartOptions.xaxis"
+            [yaxis]="linechartOptions.yaxis"
+            [dataLabels]="linechartOptions.dataLabels"
+            [grid]="linechartOptions.grid"
+            [stroke]="linechartOptions.stroke"
+            [markers]="linechartOptions.markers"
+            [tooltip]="linechartOptions.tooltip"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+    ~
+  </div>
+</div>
